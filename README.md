@@ -26,6 +26,28 @@ Stereo foundation models achieve strong zero-shot generalization but remain comp
 </td>
 
 
+
+# TensorRT inference performance.
+
+
+| Checkpoint | PyTorch (ms) | Python-TRT (ms) | Notes |
+|-----------|-------------|---------|-------|
+| `23-36-37` | 49.4 | 23.4 | Best accuracy |
+| `20-26-39` | 43.6 | 19.4 | Balanced |
+| `20-30-48` | 38.4 | 16.6 | Fastest |
+
+> Profiled on RTX 3090 Ti, 480×640, `valid_iters=8`.
+
+
+| Checkpoint | FPS (Hz) | CPP-TRT (ms) | Notes |
+|-----------|-------------|---------|-------|
+| `23-36-37` | 6.3 | 156.4 | Best accuracy |
+| `20-26-39` | 9.1 | 110.3 | Balanced |
+| `20-30-48` | 10.2 | 97.6 | Fastest |
+
+> Profiled on Jetson Orin AGX 64G, 480×640, `valid_iters=4`.
+
+
 # Environment setup
 - Option 1: Docker
 ```bash

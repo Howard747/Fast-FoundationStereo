@@ -18,11 +18,11 @@ Download from [Google Drive](https://drive.google.com/drive/folders/1HuTt7UIp7gQ
 
 | Checkpoint | FPS (Hz) | CPP-TRT (ms) | Notes |
 |-----------|-------------|---------|-------|
-| `23-36-37` | TBD | TBD | Best accuracy |
-| `20-26-39` | 12.8 | 77.8 | Balanced |
-| `20-30-48` | TBD | TBD | Fastest |
+| `23-36-37` | 6.3 | 156.4 | Best accuracy |
+| `20-26-39` | 9.1 | 110.3 | Balanced |
+| `20-30-48` | 10.2 | 97.6 | Fastest |
 
-> Profiled on Jetson Orin AGX, 480×640, `valid_iters=4`.
+> Profiled on Jetson Orin AGX 64G, 480×640, `valid_iters=4`.
 
 
 
